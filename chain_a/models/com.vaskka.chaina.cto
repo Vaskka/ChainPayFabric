@@ -1,0 +1,23 @@
+
+/**
+ * My commodity trading network
+ */
+namespace com.vaskka.chaina
+
+asset Balance identified by balanceId {
+    o String balanceId
+    o Integer value
+    --> Trader owner
+}
+
+participant Trader identified by tradeId {
+    o String tradeId
+    o String user_id
+}
+transaction Trade {
+    --> Balance balance
+    o String face_token
+    o Integer type
+    o Integer tradeValue
+    o String order_id
+}
