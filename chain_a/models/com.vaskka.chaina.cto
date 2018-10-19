@@ -13,6 +13,7 @@ asset Balance identified by balanceId {
 participant Trader identified by tradeId {
     o String tradeId
     o String user_id
+    o String face_token
 }
 transaction Trade {
     --> Balance balance
