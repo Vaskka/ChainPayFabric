@@ -1,24 +1,22 @@
 
-/**
- * My commodity trading network
- */
 namespace com.vaskka.chaina
 
 asset Balance identified by balanceId {
-    o String balanceId
-    o Integer value
-    --> Trader owner
+    o String balanceId           // 资产唯一id
+    o Integer value              // 资产具体数目
+    --> Trader owner             // 资产持有者
 }
 
 participant Trader identified by tradeId {
-    o String tradeId
-    o String user_id
-    o String face_token
+    o String tradeId             // 用户链上唯一标示
+    o String user_id             // 用户id
+    o String face_token          // 用户生物信息token
 }
+
 transaction Trade {
-    --> Balance balance
-    o String face_token
-    o Integer type
-    o Integer tradeValue
-    o String order_id
+    --> Balance balance          // 交易关联资产
+    o String face_token          // 交易发生者生物信息token
+    o Integer type               // 交易类型（0-转出 1-转入）
+    o Integer tradeValue         // 交易额
+    o String order_id            // 交易id
 }
