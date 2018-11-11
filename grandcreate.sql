@@ -31,6 +31,15 @@ CREATE TABLE `auth_group` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `auth_group`
+--
+
+LOCK TABLES `auth_group` WRITE;
+/*!40000 ALTER TABLE `auth_group` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_group` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `auth_group_permissions`
 --
 
@@ -50,6 +59,15 @@ CREATE TABLE `auth_group_permissions` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `auth_group_permissions`
+--
+
+LOCK TABLES `auth_group_permissions` WRITE;
+/*!40000 ALTER TABLE `auth_group_permissions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_group_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `auth_permission`
 --
 
@@ -66,6 +84,16 @@ CREATE TABLE `auth_permission` (
   CONSTRAINT `auth_permission_content_type_id_2f476e4b_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_permission`
+--
+
+LOCK TABLES `auth_permission` WRITE;
+/*!40000 ALTER TABLE `auth_permission` DISABLE KEYS */;
+INSERT INTO `auth_permission` VALUES (1,'Can add log entry',1,'add_logentry'),(2,'Can change log entry',1,'change_logentry'),(3,'Can delete log entry',1,'delete_logentry'),(4,'Can view log entry',1,'view_logentry'),(5,'Can add permission',2,'add_permission'),(6,'Can change permission',2,'change_permission'),(7,'Can delete permission',2,'delete_permission'),(8,'Can view permission',2,'view_permission'),(9,'Can add group',3,'add_group'),(10,'Can change group',3,'change_group'),(11,'Can delete group',3,'delete_group'),(12,'Can view group',3,'view_group'),(13,'Can add user',4,'add_user'),(14,'Can change user',4,'change_user'),(15,'Can delete user',4,'delete_user'),(16,'Can view user',4,'view_user'),(17,'Can add content type',5,'add_contenttype'),(18,'Can change content type',5,'change_contenttype'),(19,'Can delete content type',5,'delete_contenttype'),(20,'Can view content type',5,'view_contenttype'),(21,'Can add session',6,'add_session'),(22,'Can change session',6,'change_session'),(23,'Can delete session',6,'delete_session'),(24,'Can view session',6,'view_session'),(25,'Can add balance',7,'add_balance'),(26,'Can change balance',7,'change_balance'),(27,'Can delete balance',7,'delete_balance'),(28,'Can view balance',7,'view_balance'),(29,'Can add not register user',8,'add_notregisteruser'),(30,'Can change not register user',8,'change_notregisteruser'),(31,'Can delete not register user',8,'delete_notregisteruser'),(32,'Can view not register user',8,'view_notregisteruser'),(33,'Can add trade',9,'add_trade'),(34,'Can change trade',9,'change_trade'),(35,'Can delete trade',9,'delete_trade'),(36,'Can view trade',9,'view_trade'),(37,'Can add transaction',10,'add_transaction'),(38,'Can change transaction',10,'change_transaction'),(39,'Can delete transaction',10,'delete_transaction'),(40,'Can view transaction',10,'view_transaction'),(41,'Can add user',11,'add_user'),(42,'Can change user',11,'change_user'),(43,'Can delete user',11,'delete_user'),(44,'Can view user',11,'view_user'),(45,'Can add user friend request order',12,'add_userfriendrequestorder'),(46,'Can change user friend request order',12,'change_userfriendrequestorder'),(47,'Can delete user friend request order',12,'delete_userfriendrequestorder'),(48,'Can view user friend request order',12,'view_userfriendrequestorder'),(49,'Can add user mapping',13,'add_usermapping'),(50,'Can change user mapping',13,'change_usermapping'),(51,'Can delete user mapping',13,'delete_usermapping'),(52,'Can view user mapping',13,'view_usermapping'),(53,'Can add user session',14,'add_usersession'),(54,'Can change user session',14,'change_usersession'),(55,'Can delete user session',14,'delete_usersession'),(56,'Can view user session',14,'view_usersession');
+/*!40000 ALTER TABLE `auth_permission` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `auth_user`
@@ -92,6 +120,16 @@ CREATE TABLE `auth_user` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `auth_user`
+--
+
+LOCK TABLES `auth_user` WRITE;
+/*!40000 ALTER TABLE `auth_user` DISABLE KEYS */;
+INSERT INTO `auth_user` VALUES (1,'pbkdf2_sha256$120000$vgcLGIlHp8Fj$9HbE524NwDwhxtrCGf3U4w1jAqbHoeoHHkUBd+Az4Tc=','2018-10-22 08:05:33.794384',1,'vaskka','','','15145051056@163.com',1,1,'2018-10-22 08:05:21.024596'),(2,'pbkdf2_sha256$120000$uaKLcIljZeR7$PfWKeTEBKF/yPw4ldw7XqryQFH8AvdoF6CV0hERehE8=','2018-11-04 12:18:09.384868',1,'admin','','','1139851358@qq.com',1,1,'2018-11-04 12:17:46.095561');
+/*!40000 ALTER TABLE `auth_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `auth_user_groups`
 --
 
@@ -109,6 +147,15 @@ CREATE TABLE `auth_user_groups` (
   CONSTRAINT `auth_user_groups_user_id_6a12ed8b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_user_groups`
+--
+
+LOCK TABLES `auth_user_groups` WRITE;
+/*!40000 ALTER TABLE `auth_user_groups` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_user_groups` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `auth_user_user_permissions`
@@ -130,6 +177,15 @@ CREATE TABLE `auth_user_user_permissions` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `auth_user_user_permissions`
+--
+
+LOCK TABLES `auth_user_user_permissions` WRITE;
+/*!40000 ALTER TABLE `auth_user_user_permissions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_user_user_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `chain_balance`
 --
 
@@ -149,6 +205,15 @@ CREATE TABLE `chain_balance` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `chain_balance`
+--
+
+LOCK TABLES `chain_balance` WRITE;
+/*!40000 ALTER TABLE `chain_balance` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chain_balance` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `chain_notregisteruser`
 --
 
@@ -166,6 +231,15 @@ CREATE TABLE `chain_notregisteruser` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `chain_notregisteruser`
+--
+
+LOCK TABLES `chain_notregisteruser` WRITE;
+/*!40000 ALTER TABLE `chain_notregisteruser` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chain_notregisteruser` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `chain_trade`
@@ -191,6 +265,15 @@ CREATE TABLE `chain_trade` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `chain_trade`
+--
+
+LOCK TABLES `chain_trade` WRITE;
+/*!40000 ALTER TABLE `chain_trade` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chain_trade` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `chain_transaction`
 --
 
@@ -214,6 +297,16 @@ CREATE TABLE `chain_transaction` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `chain_transaction`
+--
+
+LOCK TABLES `chain_transaction` WRITE;
+/*!40000 ALTER TABLE `chain_transaction` DISABLE KEYS */;
+INSERT INTO `chain_transaction` VALUES ('o1',1,2000,'2018-11-06 03:44:58.148958','2018-11-06 03:44:58.148998','user2222222222222222V222222222aZ','n1'),('o2',1,500000,'2018-11-06 03:45:09.187915','2018-11-06 03:45:09.187947','user2222222222222222V222222222aZ','u3'),('o3',1,2102,'2018-11-06 03:48:36.176204','2018-11-06 03:48:36.176373','n1','u3'),('o4',1,21423,'2018-11-06 03:48:44.600032','2018-11-06 03:48:44.600066','n1','user2222222222222222V222222222aZ'),('o5',0,5999,'2018-11-06 03:48:52.408990','2018-11-06 03:48:52.409012','u3','user2222222222222222V222222222aZ'),('o6',0,4555,'2018-11-06 03:49:00.717983','2018-11-06 03:49:00.718010','user2222222222222222V222222222aZ','n1'),('o7',0,900,'2018-11-06 03:49:11.115887','2018-11-06 03:49:11.115914','u3','n1');
+/*!40000 ALTER TABLE `chain_transaction` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `chain_user`
 --
 
@@ -232,6 +325,16 @@ CREATE TABLE `chain_user` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `chain_user`
+--
+
+LOCK TABLES `chain_user` WRITE;
+/*!40000 ALTER TABLE `chain_user` DISABLE KEYS */;
+INSERT INTO `chain_user` VALUES ('n1','t1','n1','p1','e1','t1','2018-11-06 03:44:09.534034','2018-11-06 03:44:09.534128'),('u3','t3','n3','p3','e3','f3','2018-11-06 03:44:34.882817','2018-11-06 03:44:34.882867'),('user2222222222222222V222222222aZ','t2','n2','p2','email2@email.com','t2','2018-11-06 03:44:23.029061','2018-11-06 03:44:23.029101');
+/*!40000 ALTER TABLE `chain_user` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `chain_userfriendrequestorder`
@@ -255,6 +358,15 @@ CREATE TABLE `chain_userfriendrequestorder` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `chain_userfriendrequestorder`
+--
+
+LOCK TABLES `chain_userfriendrequestorder` WRITE;
+/*!40000 ALTER TABLE `chain_userfriendrequestorder` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chain_userfriendrequestorder` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `chain_usermapping`
 --
 
@@ -276,6 +388,15 @@ CREATE TABLE `chain_usermapping` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `chain_usermapping`
+--
+
+LOCK TABLES `chain_usermapping` WRITE;
+/*!40000 ALTER TABLE `chain_usermapping` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chain_usermapping` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `chain_usersession`
 --
 
@@ -293,6 +414,16 @@ CREATE TABLE `chain_usersession` (
   CONSTRAINT `chain_usersession_user_id_d079bae2_fk_chain_user_user_id` FOREIGN KEY (`user_id`) REFERENCES `chain_user` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `chain_usersession`
+--
+
+LOCK TABLES `chain_usersession` WRITE;
+/*!40000 ALTER TABLE `chain_usersession` DISABLE KEYS */;
+INSERT INTO `chain_usersession` VALUES (17,'s2','2018-11-06 03:44:44.976593','2018-11-06 03:44:44.976630','user2222222222222222V222222222aZ');
+/*!40000 ALTER TABLE `chain_usersession` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `django_admin_log`
@@ -319,6 +450,16 @@ CREATE TABLE `django_admin_log` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `django_admin_log`
+--
+
+LOCK TABLES `django_admin_log` WRITE;
+/*!40000 ALTER TABLE `django_admin_log` DISABLE KEYS */;
+INSERT INTO `django_admin_log` VALUES (1,'2018-10-22 08:33:29.225229','order5e41712533dcaa1fc0abbd0521d','UserFriendRequestOrder object (order5e41712533dcaa1fc0abbd0521d)',3,'',12,1),(2,'2018-10-22 08:49:24.688139','order75dca249eea03412b6095a0dca8','UserFriendRequestOrder object (order75dca249eea03412b6095a0dca8)',3,'',12,1),(3,'2018-10-22 09:02:16.802759','balance6ae43c23797635fd5d25a7a93','Balance object (balance6ae43c23797635fd5d25a7a93)',2,'[{\"changed\": {\"fields\": [\"value\"]}}]',7,1),(4,'2018-10-22 09:02:52.623562','balance6ae43c23797635fd5d25a7a93','Balance object (balance6ae43c23797635fd5d25a7a93)',2,'[{\"changed\": {\"fields\": [\"value\"]}}]',7,1),(5,'2018-10-22 09:04:31.366433','user498b4e171541952f88f0f9d7630a','User object (user498b4e171541952f88f0f9d7630a)',3,'',11,1),(6,'2018-10-22 09:04:31.393639','user3633189de80b9001746f7d2a6e9b','User object (user3633189de80b9001746f7d2a6e9b)',3,'',11,1),(7,'2018-10-22 09:33:25.378870','order49e3d2f690a245c3f160edf7121','Vaskka->Viskka',3,'',10,1),(8,'2018-10-22 09:33:54.846647','orderff9f056b34c864db4f7e40b7f91','Vaskka->Viskka',3,'',10,1),(9,'2018-11-04 12:19:06.914324','usera7593e68e734ad8c3c3ca5de711e','Viskka',3,'',11,2),(10,'2018-11-04 12:19:06.937288','user0dc8c61df8e77774bfb53a476d61','Vaskka',3,'',11,2),(11,'2018-11-05 11:10:08.719110','orderdce82271179f353a7881dce3911','Vaskka->Viskka',3,'',10,2),(12,'2018-11-05 11:10:08.750017','orderaed2bc767c8b5f96c18ead7fbb7','Vaskka->Viskka',3,'',10,2),(13,'2018-11-05 11:10:08.751715','order8219bc5175d3085f4ede8ccc933','Vaskka->Viskka',3,'',10,2),(14,'2018-11-05 11:10:08.753070','order382d9f0c2b71c4aaf99534d32cf','Vaskka->Viskka',3,'',10,2),(15,'2018-11-05 11:29:16.742976','order6a27529eb5a21b2593dc4365097','Vaskka->Viskka',3,'',10,2),(16,'2018-11-05 11:29:16.772937','order5415b99101e05113699b4e80d70','Vaskka->Viskka',3,'',10,2),(17,'2018-11-05 11:38:50.021784','userd191b740db36efcb4004d2e90666','Viskka',3,'',11,2),(18,'2018-11-05 11:38:50.104238','user6b6413ad3fa683b811d39f114fc5','Vaskka',3,'',11,2),(19,'2018-11-05 12:11:40.418893','userd13a9ac6b05eb814842fa23ca9dc','Vaskka',3,'',11,2),(20,'2018-11-05 12:11:40.438354','user7a3b6a103425b4ddee428ac63541','Viskka',3,'',11,2),(21,'2018-11-06 03:15:05.399222','user1','nick1',1,'[{\"added\": {}}]',11,2),(22,'2018-11-06 03:15:23.455232','user2','nick2',1,'[{\"added\": {}}]',11,2),(23,'2018-11-06 03:15:43.167598','order1','nick1->nick2',1,'[{\"added\": {}}]',10,2),(24,'2018-11-06 03:16:17.459021','user3','nick3',1,'[{\"added\": {}}]',11,2),(25,'2018-11-06 03:16:47.127335','order2','nick3->nick2',1,'[{\"added\": {}}]',10,2),(26,'2018-11-06 03:16:56.850874','11','nick1',1,'[{\"added\": {}}]',14,2),(27,'2018-11-06 03:17:05.296379','12','nick2',1,'[{\"added\": {}}]',14,2),(28,'2018-11-06 03:17:09.014005','13','nick3',1,'[{\"added\": {}}]',14,2),(29,'2018-11-06 03:30:57.815953','user2','nick2',2,'[{\"changed\": {\"fields\": [\"email\"]}}]',11,2),(30,'2018-11-06 03:38:18.438585','user222222222222222222222222222','nick2',2,'[{\"changed\": {\"fields\": [\"user_id\"]}}]',11,2),(31,'2018-11-06 03:39:26.040457','user222222222222222222222222222','nick2',3,'',11,2),(32,'2018-11-06 03:39:49.123391','user3','nick3',3,'',11,2),(33,'2018-11-06 03:39:49.175823','user2','nick2',3,'',11,2),(34,'2018-11-06 03:39:49.178538','user1','nick1',3,'',11,2),(35,'2018-11-06 03:40:12.677176','u1','n1',1,'[{\"added\": {}}]',11,2),(36,'2018-11-06 03:40:30.551545','user2222222222222222222222222aZ','n2',1,'[{\"added\": {}}]',11,2),(37,'2018-11-06 03:40:44.927002','u3','n3',1,'[{\"added\": {}}]',11,2),(38,'2018-11-06 03:40:56.024125','14','n1',1,'[{\"added\": {}}]',14,2),(39,'2018-11-06 03:41:02.516498','15','n3',1,'[{\"added\": {}}]',14,2),(40,'2018-11-06 03:41:11.803054','16','n2',1,'[{\"added\": {}}]',14,2),(41,'2018-11-06 03:41:18.062673','15','n3',2,'[{\"changed\": {\"fields\": [\"session_token\"]}}]',14,2),(42,'2018-11-06 03:41:36.146022','o1','n1->n2',1,'[{\"added\": {}}]',10,2),(43,'2018-11-06 03:41:45.236394','o2','n3->n2',1,'[{\"added\": {}}]',10,2),(44,'2018-11-06 03:43:44.204834','user2222222222222222V222222222aZ','n2',2,'[{\"changed\": {\"fields\": [\"user_id\"]}}]',11,2),(45,'2018-11-06 03:43:50.708707','user2222222222222222V222222222aZ','n2',3,'',11,2),(46,'2018-11-06 03:43:50.736171','user2222222222222222222222222aZ','n2',3,'',11,2),(47,'2018-11-06 03:43:50.737972','u3','n3',3,'',11,2),(48,'2018-11-06 03:43:50.739772','u1','n1',3,'',11,2),(49,'2018-11-06 03:44:09.535084','n1','n1',1,'[{\"added\": {}}]',11,2),(50,'2018-11-06 03:44:23.029769','user2222222222222222V222222222aZ','n2',1,'[{\"added\": {}}]',11,2),(51,'2018-11-06 03:44:34.883533','u3','n3',1,'[{\"added\": {}}]',11,2),(52,'2018-11-06 03:44:44.977195','17','n2',1,'[{\"added\": {}}]',14,2),(53,'2018-11-06 03:44:58.149851','o1','n1->n2',1,'[{\"added\": {}}]',10,2),(54,'2018-11-06 03:45:09.188997','o2','n3->n2',1,'[{\"added\": {}}]',10,2),(55,'2018-11-06 03:48:36.177876','o3','n3->n1',1,'[{\"added\": {}}]',10,2),(56,'2018-11-06 03:48:44.600871','o4','n2->n1',1,'[{\"added\": {}}]',10,2),(57,'2018-11-06 03:48:52.410271','o5','n2->n3',1,'[{\"added\": {}}]',10,2),(58,'2018-11-06 03:49:00.718652','o6','n1->n2',1,'[{\"added\": {}}]',10,2),(59,'2018-11-06 03:49:11.116377','o7','n1->n3',1,'[{\"added\": {}}]',10,2);
+/*!40000 ALTER TABLE `django_admin_log` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `django_content_type`
 --
 
@@ -333,6 +474,16 @@ CREATE TABLE `django_content_type` (
   UNIQUE KEY `django_content_type_app_label_model_76bd3d3b_uniq` (`app_label`,`model`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_content_type`
+--
+
+LOCK TABLES `django_content_type` WRITE;
+/*!40000 ALTER TABLE `django_content_type` DISABLE KEYS */;
+INSERT INTO `django_content_type` VALUES (1,'admin','logentry'),(3,'auth','group'),(2,'auth','permission'),(4,'auth','user'),(7,'chain','balance'),(8,'chain','notregisteruser'),(9,'chain','trade'),(10,'chain','transaction'),(11,'chain','user'),(12,'chain','userfriendrequestorder'),(13,'chain','usermapping'),(14,'chain','usersession'),(5,'contenttypes','contenttype'),(6,'sessions','session');
+/*!40000 ALTER TABLE `django_content_type` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `django_migrations`
@@ -351,6 +502,16 @@ CREATE TABLE `django_migrations` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `django_migrations`
+--
+
+LOCK TABLES `django_migrations` WRITE;
+/*!40000 ALTER TABLE `django_migrations` DISABLE KEYS */;
+INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2018-10-22 08:04:43.743471'),(2,'auth','0001_initial','2018-10-22 08:04:44.008891'),(3,'admin','0001_initial','2018-10-22 08:04:44.084375'),(4,'admin','0002_logentry_remove_auto_add','2018-10-22 08:04:44.092113'),(5,'admin','0003_logentry_add_action_flag_choices','2018-10-22 08:04:44.106637'),(6,'contenttypes','0002_remove_content_type_name','2018-10-22 08:04:44.175039'),(7,'auth','0002_alter_permission_name_max_length','2018-10-22 08:04:44.206374'),(8,'auth','0003_alter_user_email_max_length','2018-10-22 08:04:44.234797'),(9,'auth','0004_alter_user_username_opts','2018-10-22 08:04:44.247098'),(10,'auth','0005_alter_user_last_login_null','2018-10-22 08:04:44.287472'),(11,'auth','0006_require_contenttypes_0002','2018-10-22 08:04:44.289593'),(12,'auth','0007_alter_validators_add_error_messages','2018-10-22 08:04:44.297627'),(13,'auth','0008_alter_user_username_max_length','2018-10-22 08:04:44.343295'),(14,'auth','0009_alter_user_last_name_max_length','2018-10-22 08:04:44.404512'),(15,'chain','0001_initial','2018-10-22 08:04:44.844315'),(16,'sessions','0001_initial','2018-10-22 08:04:44.864422'),(17,'chain','0002_auto_20181022_0830','2018-10-22 08:30:29.296109'),(18,'chain','0003_auto_20181022_0836','2018-10-22 08:36:38.601205'),(19,'chain','0004_auto_20181022_0849','2018-10-22 08:49:04.100531'),(20,'chain','0005_auto_20181022_0934','2018-10-22 09:34:52.186594'),(21,'chain','0006_auto_20181022_0949','2018-10-22 09:49:17.416277');
+/*!40000 ALTER TABLE `django_migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `django_session`
 --
 
@@ -365,6 +526,16 @@ CREATE TABLE `django_session` (
   KEY `django_session_expire_date_a5c62663` (`expire_date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_session`
+--
+
+LOCK TABLES `django_session` WRITE;
+/*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
+INSERT INTO `django_session` VALUES ('nl0u0rtc671trqfpiaet2ng86yy5rejv','YTczN2EyMzBjMGFmNTdlZjFlZDlkMTY1ZTRmOGEyZDQyMTY1YTU3Zjp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIzOWY1NjI3NDVkOTcyZWExODNkZTdhYjFiYTMwYTdlYTg2YTI3Mjk2In0=','2018-11-18 12:18:09.402801'),('pukiih9bdp7h4hpa35tpr970pu8fr329','MmJlNjJjMDI2YmE5OTRlNzk1NDI1NTY3ZmM5NTc3Y2Y5ODJlMDNjMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmYWUyNGIxNDZkZDE4OGU5YjhiZmM0ZmQ4ZDFmY2Q3NTg0NmM2ZDRhIn0=','2018-11-05 08:05:33.798342');
+/*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -375,4 +546,4 @@ CREATE TABLE `django_session` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-12  0:35:59
+-- Dump completed on 2018-11-12  3:06:33
